@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Array con los valores de la cabecera de la tabla -->
+    <string-array name="cabecera_tabla">
+        <item> ID </item>
+        <item> Tipo </item>
+        <item> Usuario </item>
+        <item> Modificación Usuario </item>
+        <item> Eliminado Usuario </item>
+        <item> Fecha Creación </item>
+        <item> Fecha Modificación </item>
+        <item> Fecha Eliminación </item>
+    </string-array>
+</resources>
