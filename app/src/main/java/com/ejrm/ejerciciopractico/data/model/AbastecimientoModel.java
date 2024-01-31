@@ -7,33 +7,26 @@ import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
-import io.reactivex.annotations.NonNull;
 
-@Entity(tableName = "abastecimiento_table", indices = @Index(value = {"idAbastecimiento"},unique = true))
-public class AbastecimientoModel {
-    @PrimaryKey
-    @NonNull
+
+
+public class AbastecimientoModel{
+
+    @SerializedName("idAbastecimiento")
     private int idAbastecimiento;
     @SerializedName("tipoAbastecimiento")
-    @ColumnInfo(name = "tipoAbastecimiento")
     private String tipoAbastecimiento;
     @SerializedName("usuarioCreacion")
-    @ColumnInfo(name = "usuarioCreacion")
     private String usuarioCreacion;
     @SerializedName("usuarioModificacion")
-    @ColumnInfo(name = "usuarioModificacion")
     private String usuarioModificacion;
     @SerializedName("usuarioEliminacion")
-    @ColumnInfo(name = "usuarioEliminacion")
     private String usuarioEliminacion;
     @SerializedName("fechaCreacion")
-    @ColumnInfo(name = "fechaCreacion")
     private String fechaCreacion;
     @SerializedName("fechaModificacion")
-    @ColumnInfo(name = "fechaModificacion")
     private String fechaModificacion;
     @SerializedName("fechaEliminacion")
-    @ColumnInfo(name = "fechaEliminacion")
     private String fechaEliminacion;
     public AbastecimientoModel(int idAbastecimiento, String tipoAbastecimiento, String usuarioCreacion, String usuarioModificacion, String usuarioEliminacion, String fechaCreacion, String fechaModificacion, String fechaEliminacion) {
         this.idAbastecimiento = idAbastecimiento;

@@ -5,36 +5,53 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.ejrm.ejerciciopractico.data.AbastecimientoRepository;
-import com.ejrm.ejerciciopractico.data.db.AbastecimientoDao;
-import com.ejrm.ejerciciopractico.data.db.AbastecimientoDataBase;
 import com.ejrm.ejerciciopractico.data.model.AbastecimientoModel;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Single;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class MainViewModel extends AndroidViewModel {
-    //private AbastecimientoDataBase abastecimientoDataBase;
-    //private AbastecimientoDao abastecimientoDao;
     private AbastecimientoRepository abastecimientoRepository;
-    private LiveData<List<AbastecimientoModel>> getAll;
+    private CompositeDisposable disposables = new CompositeDisposable();
+    private MutableLiveData<List<AbastecimientoModel>> sanitAbastecimientoLiveData = new MutableLiveData<>();
+
+
     public MainViewModel(@NonNull Application application) {
         super(application);
-        abastecimientoRepository=new AbastecimientoRepository(application);
-        getAll=abastecimientoRepository.getAll();
+       abastecimientoRepository=new AbastecimientoRepository(application);
+        fetchSanitAbastecimiento();
     }
-  //  public Single<Boolean> insertPost(AbastecimientoModel abastecimientoModel) {
+
+
+    //  public Single<Boolean> insertPost(AbastecimientoModel abastecimientoModel) {
   //      return AbastecimientoRepository.getInstance().insert(abastecimientoDao, abastecimientoModel);
   //  }
 
     public LiveData<List<AbastecimientoModel>> getAbastecimiento() {
-        return getAll;
+        return sanitAbastecimientoLiveData;
+    }
+    private void fetchSanitAbastecimiento() {
+        disposables.add(abastecimientoRepository.getAll()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                        apiResponse -> sanitAbastecimientoLiveData.setValue(apiResponse.getSanitAbastecimientoList()),
+
+                        throwable -> {
+
+                        }
+                )
+        );
     }
 
-  //  public Single<List<AbastecimientoModel>> getLocalPosts() {
-  //      return AbastecimientoRepository.getInstance().getAllLocalPosts(abastecimientoDao);
-  //  }
+    @Override
+    protected void onCleared() {
+        disposables.clear();
+    }
 }

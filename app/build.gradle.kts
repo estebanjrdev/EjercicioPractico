@@ -43,7 +43,9 @@ dependencies {
     implementation ("com.squareup.retrofit2:adapter-rxjava2:2.3.0")
     // Room
     implementation ("androidx.room:room-runtime:2.3.0")
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
    // implementation("androidx.annotation:annotation-jvm:1.7.1")
+    // implementation("androidx.annotation:annotation-jvm:1.7.1")
     annotationProcessor ("androidx.room:room-compiler:2.3.0")
     implementation ("androidx.room:room-ktx:2.3.0")
 

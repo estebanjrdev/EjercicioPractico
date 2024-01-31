@@ -3,16 +3,210 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="105dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/round_linked_camera_24"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        app:rowCount="5"
+        app:columnCount="4">
+
+        <TextView
+            android:text="Papel"
+            app:layout_row="0"
+            app:layout_column="0"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center" />
+        <Button
+            android:text="SI"
+            android:id="@+id/papelSI"
+            app:layout_row="0"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="NO"
+            android:id="@+id/papelNO"
+            app:layout_row="0"
+            app:layout_column="2"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="N/A"
+            android:id="@+id/papelNA"
+            app:layout_row="0"
+            app:layout_column="3"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:text="Toallas"
+            app:layout_row="1"
+            app:layout_column="0"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center" />
+        <Button
+            android:text="SI"
+            android:id="@+id/toallaSI"
+            app:layout_row="1"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="NO"
+            android:id="@+id/toallaNO"
+            app:layout_row="1"
+            app:layout_column="2"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="N/A"
+            android:id="@+id/toallaNA"
+            app:layout_row="1"
+            app:layout_column="3"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:text="Desorodante"
+            app:layout_row="2"
+            app:layout_column="0"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center" />
+        <Button
+            android:text="SI"
+            android:id="@+id/desorodanteSI"
+            app:layout_row="2"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="NO"
+            android:id="@+id/desorodanteNO"
+            app:layout_row="2"
+            app:layout_column="2"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="N/A"
+            android:id="@+id/desorodanteNA"
+            app:layout_row="2"
+            app:layout_column="3"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:text="Jabón"
+            app:layout_row="3"
+            app:layout_column="0"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center" />
+        <Button
+            android:text="SI"
+            android:id="@+id/jabonSI"
+            app:layout_row="3"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="NO"
+            android:id="@+id/jabonNO"
+            app:layout_row="3"
+            app:layout_column="2"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="N/A"
+            android:id="@+id/jabonNA"
+            app:layout_row="3"
+            app:layout_column="3"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <TextView
+            android:text="Agua"
+            app:layout_row="4"
+            app:layout_column="0"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center" />
+        <Button
+            android:text="SI"
+            android:id="@+id/aguaSI"
+            app:layout_row="4"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="NO"
+            android:id="@+id/aguaNO"
+            app:layout_row="4"
+            app:layout_column="2"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+        <Button
+            android:text="N/A"
+            android:id="@+id/aguaNA"
+            app:layout_row="4"
+            app:layout_column="3"
+            app:layout_gravity="fill"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+</HorizontalScrollView>
+    <Button
+        android:id="@+id/buttonCatalogos"
+        android:background="@drawable/boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#FFFFFF"
+        android:text="Catalogos"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="283dp" />
+    <Button
+        android:id="@+id/verCatalogos"
+        android:background="@drawable/boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFFFFF"
+        android:text="Ver Catalogos"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="283dp" />
+
 </LinearLayout>

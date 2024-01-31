@@ -1,5 +1,6 @@
 package com.ejrm.ejerciciopractico.view.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ public class AbastecimientoAdapter extends RecyclerView.Adapter<AbastecimientoAd
                 .inflate(R.layout.card,parent,false));
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull AbastecimientoAdapter.AbastecimientoViewHolder holder, int position) {
         AbastecimientoModel abastecimientoModel=List.get(position);
