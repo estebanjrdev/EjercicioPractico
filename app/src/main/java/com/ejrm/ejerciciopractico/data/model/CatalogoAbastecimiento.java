@@ -7,6 +7,7 @@ public class CatalogoAbastecimiento {
     private String desorodante;
     private String jabon;
     private String agua;
+
     public CatalogoAbastecimiento(int id, String papel, String toallas, String desorodante, String jabon, String agua) {
         this.id = id;
         this.papel = papel;

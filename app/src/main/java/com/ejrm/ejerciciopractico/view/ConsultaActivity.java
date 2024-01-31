@@ -33,33 +33,22 @@ public class ConsultaActivity extends AppCompatActivity {
     private List<AbastecimientoModel> abastecimientoModels;
     private AbastecimientoAdapter abastecimientoAdapter;
     public Tabla tabla;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.consulta_activity);
-        recyclerView=findViewById(R.id.recycler);
+        recyclerView = findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-       // abastecimientoModels=new ArrayList<>();
-       // abastecimientoModels.add(new AbastecimientoModel(1, "Papel", "jbarragan", "","","07/08/2020 07:30:37 p. m.","",""));
-       // abastecimientoModels.add(new AbastecimientoModel(2, "Toallas", "jbarragan","","", "07/08/2020 07:30:37 p. m.","",""));
-       // abastecimientoModels.add(new AbastecimientoModel(3, "Desodorante", "jbarragan","","",  "07/08/2020 07:30:37 p. m.","",""));
-     //  abastecimientoModels.add(new AbastecimientoModel(5, "Agua", "jgarciar","","",  "02/03/2023 01:43:29 p. m.","","" ));
 
-        abastecimientoAdapter=new AbastecimientoAdapter(this,abastecimientoModels);
-       // viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        abastecimientoAdapter = new AbastecimientoAdapter(this, abastecimientoModels);
         viewModel = new ViewModelProvider(this, new ViewModelProvider.AndroidViewModelFactory(getApplication()))
                 .get(MainViewModel.class);
         viewModel.getAbastecimiento().observe(ConsultaActivity.this, abastecimientoModels -> {
                     recyclerView.setAdapter(abastecimientoAdapter);
-                   // if (abastecimientoModels.isEmpty()){
-                  //      Toast.makeText(this,"Lista Vacia",Toast.LENGTH_SHORT).show();
-                  //  }else {
-                  //      Toast.makeText(this,"Lista no Vacia",Toast.LENGTH_SHORT).show();
-                  //  }
-                   // System.out.println( abastecimientoModels.size());
                     abastecimientoAdapter.getAll(abastecimientoModels);
                 }
-                );
+        );
 
     }
-    }
+}

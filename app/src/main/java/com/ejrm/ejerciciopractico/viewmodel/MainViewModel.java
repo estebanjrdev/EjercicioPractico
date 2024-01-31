@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.ejrm.ejerciciopractico.data.AbastecimientoRepository;
 import com.ejrm.ejerciciopractico.data.model.AbastecimientoModel;
+
 import java.util.List;
 
 import io.reactivex.Single;
@@ -24,18 +25,14 @@ public class MainViewModel extends AndroidViewModel {
 
     public MainViewModel(@NonNull Application application) {
         super(application);
-       abastecimientoRepository=new AbastecimientoRepository(application);
+        abastecimientoRepository = new AbastecimientoRepository(application);
         fetchSanitAbastecimiento();
     }
-
-
-    //  public Single<Boolean> insertPost(AbastecimientoModel abastecimientoModel) {
-  //      return AbastecimientoRepository.getInstance().insert(abastecimientoDao, abastecimientoModel);
-  //  }
 
     public LiveData<List<AbastecimientoModel>> getAbastecimiento() {
         return sanitAbastecimientoLiveData;
     }
+
     private void fetchSanitAbastecimiento() {
         disposables.add(abastecimientoRepository.getAll()
                 .subscribeOn(Schedulers.io())

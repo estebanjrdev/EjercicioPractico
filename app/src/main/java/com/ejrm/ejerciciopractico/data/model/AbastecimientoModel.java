@@ -8,9 +8,7 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.SerializedName;
 
 
-
-
-public class AbastecimientoModel{
+public class AbastecimientoModel {
 
     @SerializedName("idAbastecimiento")
     private int idAbastecimiento;
@@ -28,6 +26,7 @@ public class AbastecimientoModel{
     private String fechaModificacion;
     @SerializedName("fechaEliminacion")
     private String fechaEliminacion;
+
     public AbastecimientoModel(int idAbastecimiento, String tipoAbastecimiento, String usuarioCreacion, String usuarioModificacion, String usuarioEliminacion, String fechaCreacion, String fechaModificacion, String fechaEliminacion) {
         this.idAbastecimiento = idAbastecimiento;
         this.tipoAbastecimiento = tipoAbastecimiento;

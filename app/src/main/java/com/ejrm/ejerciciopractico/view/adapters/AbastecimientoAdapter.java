@@ -21,42 +21,45 @@ public class AbastecimientoAdapter extends RecyclerView.Adapter<AbastecimientoAd
     private List<AbastecimientoModel> List;
 
     public AbastecimientoAdapter(Context context, List<AbastecimientoModel> List) {
-        this.context =  context;
+        this.context = context;
         this.List = List;
     }
+
     @NonNull
     @Override
     public AbastecimientoAdapter.AbastecimientoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new AbastecimientoViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.card,parent,false));
+                .inflate(R.layout.card, parent, false));
     }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull AbastecimientoAdapter.AbastecimientoViewHolder holder, int position) {
-        AbastecimientoModel abastecimientoModel=List.get(position);
-        holder.id.setText("Id "+abastecimientoModel.getIdAbastecimiento());
-        holder.tipo.setText("Tipo "+abastecimientoModel.getTipoAbastecimiento());
-        holder.usuario.setText("Usuario "+abastecimientoModel.getUsuarioCreacion());
-        holder.fecha.setText("Fecha "+abastecimientoModel.getFechaCreacion());
+        AbastecimientoModel abastecimientoModel = List.get(position);
+        holder.id.setText("Id " + abastecimientoModel.getIdAbastecimiento());
+        holder.tipo.setText("Tipo " + abastecimientoModel.getTipoAbastecimiento());
+        holder.usuario.setText("Usuario " + abastecimientoModel.getUsuarioCreacion());
+        holder.fecha.setText("Fecha " + abastecimientoModel.getFechaCreacion());
     }
 
-    public void getAll(List<AbastecimientoModel> List)
-    {
-        this.List=List;
+    public void getAll(List<AbastecimientoModel> List) {
+        this.List = List;
     }
+
     @Override
     public int getItemCount() {
         return List.size();
     }
-    public static class AbastecimientoViewHolder extends RecyclerView.ViewHolder{
-        public TextView id,tipo,usuario,fecha;
+
+    public static class AbastecimientoViewHolder extends RecyclerView.ViewHolder {
+        public TextView id, tipo, usuario, fecha;
+
         public AbastecimientoViewHolder(@NonNull View itemView) {
             super(itemView);
-            id=itemView.findViewById(R.id.id);
-            tipo=itemView.findViewById(R.id.tipo);
-            usuario=itemView.findViewById(R.id.usuario);
-            fecha=itemView.findViewById(R.id.fecha);
+            id = itemView.findViewById(R.id.id);
+            tipo = itemView.findViewById(R.id.tipo);
+            usuario = itemView.findViewById(R.id.usuario);
+            fecha = itemView.findViewById(R.id.fecha);
         }
     }
 }

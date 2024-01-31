@@ -21,7 +21,6 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.ejrm.ejerciciopractico.MyApp;
 import com.ejrm.ejerciciopractico.R;
 import com.ejrm.ejerciciopractico.data.db.AppDatabase;
 import com.ejrm.ejerciciopractico.data.db.CatalogoAbastecimientoDao;
@@ -39,8 +38,9 @@ public class CatalogoActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 101;
     private ImageView img;
     private CatalogoAbastecimientoEntity nuevoCatalogo;
-    private Button btnverCatalogos, btnCatalogos,btnPsi,btnPno,btnPna,btnTsi,btnTno,btnTna,btnDsi,btnDno,btnDna,btnJsi,btnJno,btnJna,btnAsi,btnAno,btnAna;
-    private String papel,toalla,desorodante,jabon,agua;
+    private Button btnverCatalogos, btnCatalogos, btnPsi, btnPno, btnPna, btnTsi, btnTno, btnTna, btnDsi, btnDno, btnDna, btnJsi, btnJno, btnJna, btnAsi, btnAno, btnAna;
+    private String papel, toalla, desorodante, jabon, agua;
+
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,11 +76,11 @@ public class CatalogoActivity extends AppCompatActivity {
         btnPsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(papel, "")){
-                    papel=btnPsi.getText().toString();
+                if (Objects.equals(papel, "")) {
+                    papel = btnPsi.getText().toString();
                 } else {
-                    papel="";
-                    papel=btnPsi.getText().toString();
+                    papel = "";
+                    papel = btnPsi.getText().toString();
                 }
 
             }
@@ -88,11 +88,11 @@ public class CatalogoActivity extends AppCompatActivity {
         btnPno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(papel, "")){
-                    papel=btnPno.getText().toString();
+                if (Objects.equals(papel, "")) {
+                    papel = btnPno.getText().toString();
                 } else {
-                    papel="";
-                    papel=btnPno.getText().toString();
+                    papel = "";
+                    papel = btnPno.getText().toString();
                 }
 
             }
@@ -100,11 +100,11 @@ public class CatalogoActivity extends AppCompatActivity {
         btnPna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(papel, "")){
-                    papel=btnPna.getText().toString();
+                if (Objects.equals(papel, "")) {
+                    papel = btnPna.getText().toString();
                 } else {
-                    papel="";
-                    papel=btnPna.getText().toString();
+                    papel = "";
+                    papel = btnPna.getText().toString();
                 }
 
             }
@@ -113,33 +113,33 @@ public class CatalogoActivity extends AppCompatActivity {
         btnTsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(toalla, "")){
-                    toalla=btnTsi.getText().toString();
+                if (Objects.equals(toalla, "")) {
+                    toalla = btnTsi.getText().toString();
                 } else {
-                    toalla="";
-                    toalla=btnTsi.getText().toString();
+                    toalla = "";
+                    toalla = btnTsi.getText().toString();
                 }
             }
         });
         btnTno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(toalla, "")){
-                    toalla=btnTno.getText().toString();
+                if (Objects.equals(toalla, "")) {
+                    toalla = btnTno.getText().toString();
                 } else {
-                    toalla="";
-                    toalla=btnTno.getText().toString();
+                    toalla = "";
+                    toalla = btnTno.getText().toString();
                 }
             }
         });
         btnTna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(toalla, "")){
-                    toalla=btnTna.getText().toString();
+                if (Objects.equals(toalla, "")) {
+                    toalla = btnTna.getText().toString();
                 } else {
-                    toalla="";
-                    toalla=btnTna.getText().toString();
+                    toalla = "";
+                    toalla = btnTna.getText().toString();
                 }
             }
         });
@@ -147,33 +147,33 @@ public class CatalogoActivity extends AppCompatActivity {
         btnDsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(desorodante, "")){
-                    desorodante=btnDsi.getText().toString();
+                if (Objects.equals(desorodante, "")) {
+                    desorodante = btnDsi.getText().toString();
                 } else {
-                    desorodante="";
-                    desorodante=btnDsi.getText().toString();
+                    desorodante = "";
+                    desorodante = btnDsi.getText().toString();
                 }
             }
         });
         btnDno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(desorodante, "")){
-                    desorodante=btnDno.getText().toString();
+                if (Objects.equals(desorodante, "")) {
+                    desorodante = btnDno.getText().toString();
                 } else {
-                    desorodante="";
-                    desorodante=btnDno.getText().toString();
+                    desorodante = "";
+                    desorodante = btnDno.getText().toString();
                 }
             }
         });
         btnDna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(desorodante, "")){
-                    desorodante=btnDna.getText().toString();
+                if (Objects.equals(desorodante, "")) {
+                    desorodante = btnDna.getText().toString();
                 } else {
-                    desorodante="";
-                    desorodante=btnDna.getText().toString();
+                    desorodante = "";
+                    desorodante = btnDna.getText().toString();
                 }
             }
         });
@@ -181,33 +181,33 @@ public class CatalogoActivity extends AppCompatActivity {
         btnJsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(jabon, "")){
-                    jabon=btnJsi.getText().toString();
+                if (Objects.equals(jabon, "")) {
+                    jabon = btnJsi.getText().toString();
                 } else {
-                    jabon="";
-                    jabon=btnJsi.getText().toString();
+                    jabon = "";
+                    jabon = btnJsi.getText().toString();
                 }
             }
         });
         btnJno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(jabon, "")){
-                    jabon=btnJno.getText().toString();
+                if (Objects.equals(jabon, "")) {
+                    jabon = btnJno.getText().toString();
                 } else {
-                    jabon="";
-                    jabon=btnJno.getText().toString();
+                    jabon = "";
+                    jabon = btnJno.getText().toString();
                 }
             }
         });
         btnJna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(jabon, "")){
-                    jabon=btnJna.getText().toString();
+                if (Objects.equals(jabon, "")) {
+                    jabon = btnJna.getText().toString();
                 } else {
-                    jabon="";
-                    jabon=btnJna.getText().toString();
+                    jabon = "";
+                    jabon = btnJna.getText().toString();
                 }
             }
         });
@@ -215,22 +215,22 @@ public class CatalogoActivity extends AppCompatActivity {
         btnAsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(agua, "")){
-                    agua=btnAsi.getText().toString();
+                if (Objects.equals(agua, "")) {
+                    agua = btnAsi.getText().toString();
                 } else {
-                    agua="";
-                    agua=btnAsi.getText().toString();
+                    agua = "";
+                    agua = btnAsi.getText().toString();
                 }
             }
         });
         btnAno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Objects.equals(agua, "")){
-                    agua=btnAno.getText().toString();
+                if (Objects.equals(agua, "")) {
+                    agua = btnAno.getText().toString();
                 } else {
-                    agua="";
-                    agua=btnAno.getText().toString();
+                    agua = "";
+                    agua = btnAno.getText().toString();
                 }
             }
         });
@@ -240,9 +240,9 @@ public class CatalogoActivity extends AppCompatActivity {
                 //if (/*imgByte(img).length==0 ||*/ Objects.equals(papel, "") || Objects.equals(toalla, "") || Objects.equals(desorodante, "") || Objects.equals(jabon, "") || Objects.equals(agua, "")) {
                 //    Toast.makeText(CatalogoActivity.this,"Selecciona si aplican",Toast.LENGTH_SHORT).show();
 
-               // } else {
-                    catalogoAbastecimientoEntity = new CatalogoAbastecimientoEntity(imgByte(img), papel, toalla, desorodante, jabon, agua);
-                    catalogoAbastecimientoDao.insert(catalogoAbastecimientoEntity);
+                // } else {
+                catalogoAbastecimientoEntity = new CatalogoAbastecimientoEntity(imgByte(img), papel, toalla, desorodante, jabon, agua);
+                catalogoAbastecimientoDao.insert(catalogoAbastecimientoEntity);
                 //}
             }
         });
@@ -276,7 +276,7 @@ public class CatalogoActivity extends AppCompatActivity {
         }
     }
 
-    public byte[] imgByte(ImageView imageView){
+    public byte[] imgByte(ImageView imageView) {
         BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
 

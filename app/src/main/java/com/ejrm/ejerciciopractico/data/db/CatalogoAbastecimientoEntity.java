@@ -27,7 +27,7 @@ public class CatalogoAbastecimientoEntity {
     private String agua;
 
     public CatalogoAbastecimientoEntity(byte[] imagen, String papel, String toallas, String desorodante, String jabon, String agua) {
-        this.imagen=imagen;
+        this.imagen = imagen;
         this.papel = papel;
         this.toallas = toallas;
         this.desorodante = desorodante;
@@ -42,6 +42,7 @@ public class CatalogoAbastecimientoEntity {
     public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
+
     public int getId() {
         return id;
     }

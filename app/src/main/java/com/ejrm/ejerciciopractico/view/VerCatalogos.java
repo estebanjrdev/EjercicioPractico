@@ -21,17 +21,16 @@ public class VerCatalogos extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<CatalogoAbastecimientoEntity> catalogoAbastecimientoEntities;
     private CatalogoAdapter catalogoAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ver_catalogos);
-        recyclerView=findViewById(R.id.recyclercatalogo);
+        recyclerView = findViewById(R.id.recyclercatalogo);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        AppDatabase database = AppDatabase.getInstance(getApplication());
-        catalogoAbastecimientoDao = database.catalogoAbastecimientoDao();
-        catalogoAbastecimientoEntities=catalogoAbastecimientoDao.getAllCatalogoAbastecimientos();
-        catalogoAdapter=new CatalogoAdapter(this,catalogoAbastecimientoEntities);
+        catalogoAbastecimientoEntities = catalogoAbastecimientoDao.getAllCatalogoAbastecimientos();
+        catalogoAdapter = new CatalogoAdapter(this, catalogoAbastecimientoEntities);
         recyclerView.setAdapter(catalogoAdapter);
     }
 }

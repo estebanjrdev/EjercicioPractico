@@ -3,7 +3,6 @@ package com.ejrm.ejerciciopractico.viewmodel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.ejrm.ejerciciopractico.MyApp;
 import com.ejrm.ejerciciopractico.data.db.CatalogoAbastecimientoDao;
 import com.ejrm.ejerciciopractico.data.db.CatalogoAbastecimientoEntity;
 import com.ejrm.ejerciciopractico.data.model.CatalogoAbastecimiento;
@@ -15,7 +14,7 @@ public class CatalogoAbastecimientoViewModel extends ViewModel {
     private LiveData<List<CatalogoAbastecimientoEntity>> catalogoAbastecimientos;
 
     public CatalogoAbastecimientoViewModel() {
-        catalogoAbastecimientoDao = MyApp.database.catalogoAbastecimientoDao();
+       // catalogoAbastecimientoDao = MyApp.database.catalogoAbastecimientoDao();
         catalogoAbastecimientos = (LiveData<List<CatalogoAbastecimientoEntity>>) catalogoAbastecimientoDao.getAllCatalogoAbastecimientos();
 
     }

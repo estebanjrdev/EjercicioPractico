@@ -2,6 +2,7 @@ package com.ejrm.ejerciciopractico.data.network;
 
 import com.ejrm.ejerciciopractico.data.model.AbastecimientoModel;
 import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class ApiResponse {
